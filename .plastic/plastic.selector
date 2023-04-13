@@ -1,0 +1,4 @@
+repository "VR_Grocery@local"
+  path "/"
+    br "/main"
+    co "/main"
