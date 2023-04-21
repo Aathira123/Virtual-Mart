@@ -156,8 +156,14 @@ public class playSelect : MonoBehaviour
              menuButtons[4].gameObject.SetActive(true);
                 if (Input.GetButtonDown("js7"))
               {
-                Debug.Log("insode case 2 ");
-                SceneManager.LoadScene("SuperMarket");
+                
+                PlayerPrefs.SetString("item1", "Potato");
+                PlayerPrefs.SetString("item2", "Eggs");
+                PlayerPrefs.SetString("item3", "Milk");
+                PlayerPrefs.SetString("item4", "Bread");
+                PlayerPrefs.SetString("item5", "Cereal");
+                PlayerPrefs.SetInt("count",5);
+                 SceneManager.LoadScene("SuperMarket");
 
               }
             
@@ -171,7 +177,13 @@ public class playSelect : MonoBehaviour
             menuButtons[5].gameObject.SetActive(true);
             if (Input.GetButtonDown("js7"))
               {
-                Debug.Log("insode case 3 ");
+                 PlayerPrefs.SetString("item1", "Mango");
+                PlayerPrefs.SetString("item2", "Banana");
+                PlayerPrefs.SetString("item3", "Chicken");
+                PlayerPrefs.SetString("item4", "Lays");
+                PlayerPrefs.SetString("item5", "Juice");
+                 PlayerPrefs.SetString("item5", "Coke");
+                 PlayerPrefs.SetInt("count",6);
                 SceneManager.LoadScene("SuperMarket");
 
               }

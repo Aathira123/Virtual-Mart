@@ -6,9 +6,13 @@ using UnityEngine;
 public class DisplayItemDetails : MonoBehaviour
 {
     public static  Dictionary<string, (float price, DateTime? expiryDate)> itemData;
+    string item1,item2,item3,item4,item5;
     // Start is called before the first frame update
     void Start()
     {
+        
+       
+
         itemData = new Dictionary<string, (float price, DateTime? expiryDate)>();
 
         // Add item data to the dictionary
@@ -38,6 +42,7 @@ public class DisplayItemDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("selected shopping list: "+selectlist);
 
     }
 }
