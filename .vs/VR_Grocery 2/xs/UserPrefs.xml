@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{1DC065B6-6702-4B0F-518A-C854AE595073}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RotateCartWithCam.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Teleportation.cs" Line="58" Column="8" />
+      <File FileName="Assets/Scripts/OpenTeleportMenu.cs" />
+      <File FileName="Assets/Scripts/RotateCartWithCam.cs" Line="27" Column="86" />
+      <File FileName="Assets/Scripts/OutlineBehaviour.cs" Line="88" Column="90" />
+      <File FileName="Assets/Scripts/SelectCart.cs" Line="39" Column="80" />
+      <File FileName="Assets/Scripts/playSelect.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VR_Grocery 2" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="RotateCartWithCam.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="13ae72a7-27ee-4060-9e49-70f343359d8a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
