@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class AddRigidBody : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AddRigidBody : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         c = 0;
         GameObject.Find("PriceDisplay").SetActive(false);
         GameObject.Find("InstCanvas").SetActive(false);

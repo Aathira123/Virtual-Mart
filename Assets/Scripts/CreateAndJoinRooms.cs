@@ -32,13 +32,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("SuperMarket");
     }
 
-    public override void OnCreatedRoom()
-    {
-       
-
-
-
-    }
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +93,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
         else if (selectedButtonIndex == 1 && Input.GetButtonDown("js7"))
         {
+            Debug.Log("test");
             JoinRoom();
         }
     }

@@ -102,6 +102,7 @@
     <Compile Include="Assets/Photon/PhotonChat/Demos/Common/TextToggleIsOnTransition.cs" />
     <Compile Include="Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs" />
     <Compile Include="Assets/Samples/Google Cardboard XR Plugin for Unity/1.20.0/Hello Cardboard/Scripts/VrModeController.cs" />
+    <Compile Include="Assets/Scripts/SpawnPlayers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
