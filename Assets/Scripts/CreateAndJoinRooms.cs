@@ -7,6 +7,7 @@ using Photon.Realtime;
 using ExitGames.Client.Photon;
 
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
@@ -16,7 +17,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     private int selectedButtonIndex = 0;
     private bool joystickMoved = false;
     Color myColor;
-
+    private bool isSceneLoading=false;
     public void CreateRoom()
     {
         PhotonNetwork.CreateRoom(createInput.text);
@@ -29,10 +30,30 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("SuperMarket");
+       
+        if (!isSceneLoading)
+        {
+            Debug.Log("new");
+            StartCoroutine(LoadSceneAsync("SuperMarket"));
+        }
+        //PhotonNetwork.LoadLevel("SuperMarket");
+    }
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        isSceneLoading = true;
+        PhotonNetwork.IsMessageQueueRunning = false; // pause the message queue
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        PhotonNetwork.IsMessageQueueRunning = true; // resume the message queue
+        isSceneLoading = false;
     }
 
-  
     // Start is called before the first frame update
     void Start()
     {
@@ -93,7 +114,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
         else if (selectedButtonIndex == 1 && Input.GetButtonDown("js7"))
         {
-            Debug.Log("test");
+           
             JoinRoom();
         }
     }

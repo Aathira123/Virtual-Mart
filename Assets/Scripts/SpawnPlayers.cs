@@ -10,8 +10,8 @@ public class SpawnPlayers : MonoBehaviour
     void Start()
     {
         Vector3 randompos = new Vector3(Random.Range(minX, maxX), -51f, Random.Range(minZ, maxZ));
-        PhotonNetwork.Instantiate(playerPrefab.name, randompos, Quaternion.identity);
-        playerPrefab.transform.SetParent(GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").transform);
+        GameObject instobj =PhotonNetwork.Instantiate(playerPrefab.name, randompos, Quaternion.identity);
+        instobj.transform.SetParent(GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").transform);
     }
 
     // Update is called once per frame
