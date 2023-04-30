@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-
+using Photon.Pun;
 public class ItemMenuEnable : MonoBehaviour
 {
     public GameObject itemmenu;
@@ -17,7 +17,7 @@ public class ItemMenuEnable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
+        cam = GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
         flag = -1;
         
        

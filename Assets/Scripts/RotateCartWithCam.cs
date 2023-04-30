@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 public class RotateCartWithCam : MonoBehaviour
 {
     GameObject cart;
@@ -17,7 +17,7 @@ public class RotateCartWithCam : MonoBehaviour
         if (Input.GetButtonDown("js11"))
         {
             cart = GameObject.Find("shoppingcart");
-            if (cart.transform.IsChildOf(GameObject.Find("Character").transform))
+            if (cart.transform.IsChildOf(GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform))
             {
                 Vector3 forward = transform.forward;
 

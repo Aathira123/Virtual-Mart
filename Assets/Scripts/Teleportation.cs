@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using Photon.Pun;
 public class Teleportation : MonoBehaviour
 {
 	private bool PointerOn;
@@ -21,7 +21,7 @@ public class Teleportation : MonoBehaviour
     {
     	//button=GetComponent<Button>();
     
-        reticle=GameObject.Find("Character").transform;
+        reticle=GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform;
     }
     // Update is called once per frame
     void Update()

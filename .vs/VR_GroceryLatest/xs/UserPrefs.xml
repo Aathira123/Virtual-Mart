@@ -1,22 +1,31 @@
 ﻿<Properties StartupConfiguration="{D71C254A-4E2D-A9BC-930E-D38D85580702}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/QuickOutline/Scripts/Outline.cs">
     <Files>
-      <File FileName="Assets/Scripts/OutlineBehaviour.cs" Line="104" Column="17" IsPinned="True" />
-      <File FileName="Assets/Scripts/AddRigidBody.cs" Line="13" Column="9" />
-      <File FileName="Assets/InputFieldController.cs" />
+      <File FileName="Assets/Scripts/OutlineBehaviour.cs" Line="97" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/SpawnPlayers.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/CokeMachineSpawn.cs" />
+      <File FileName="Assets/Scripts/DisplayItemDetails.cs" />
+      <File FileName="Assets/Scripts/ItemMenuEnable.cs" />
       <File FileName="Assets/Scripts/ShopCartButtonScript.cs" />
-      <File FileName="Assets/Scripts/RotateCartWithCam.cs" Line="26" Column="85" />
-      <File FileName="Assets/Scripts/CreateAndJoinRooms.cs" Line="36" Column="30" />
-      <File FileName="Assets/Scripts/SpawnPlayers.cs" Line="14" Column="16" />
-      <File FileName="Assets/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/OpenTeleportMenu.cs" />
+      <File FileName="Assets/Scripts/playSelect.cs" />
+      <File FileName="Assets/Scripts/Spawnscript.cs" />
+      <File FileName="Assets/Scripts/AddRigidBody.cs" />
+      <File FileName="Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs" />
+      <File FileName="Assets/Samples/Google Cardboard XR Plugin for Unity/1.20.0/Hello Cardboard/Scripts/CharacterMovement.cs" />
+      <File FileName="Assets/QuickOutline/Scripts/Outline.cs" Line="192" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VR_GroceryLatest" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="Player.cs" selected="True" />
+              <Node name="QuickOutline" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="OutlineBehaviour.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -29,7 +38,7 @@
     <String>PunDemos.DemoSlotcarEditor.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f0c1d199-7ddd-4725-904f-8a68f85bc714" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bda39a61-9fef-4c75-8c02-f427c3f2922c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/OpenScene.unity
     guid: 9244853e5271447d5aaeab951dcb8c0d
   - enabled: 1
-    path: Assets/Scenes/SuperMarket.unity
-    guid: a7444b82c1528455887e7cc9a567c904
-  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: 87f6024afe50249bd9865df7fad24c61
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: ff3f6dc22b9d34d60b2b01762a3fa297
+  - enabled: 1
+    path: Assets/Scenes/SuperMarket.unity
+    guid: a7444b82c1528455887e7cc9a567c904
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 12a10adc516e54b6ca6354be11ceb2e3, type: 2}

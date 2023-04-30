@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using System;
+using Photon.Pun;
 
 public class OutlineBehaviour : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class OutlineBehaviour : MonoBehaviour
         outline = GetComponent<Outline>();
   
         outline.enabled=false;
-
-        cam = GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
+      
+        cam = GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
 
     
 
@@ -66,7 +67,7 @@ public class OutlineBehaviour : MonoBehaviour
                 if (GameObject.Find("shoppingcart").transform.IsChildOf(GameObject.Find("Character").transform))
                 {
                     
-                    cart = GameObject.Find("Character").transform.Find("shoppingcart").gameObject;
+                    cart = GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform.Find("shoppingcart").gameObject;
                     cam.transform.position = cart.transform.position - cart.transform.forward * -12f;
                     string s = cart.transform.Find("BillCanvas/BillButton").GetComponentInChildren<TextMeshProUGUI>().text;
                     s = s.Substring(0, s.Length - 1);
@@ -97,7 +98,7 @@ public class OutlineBehaviour : MonoBehaviour
             {
                 
                 transform.SetParent(GameObject.Find("shoppingcart").gameObject.transform);
-                GameObject.Find("shoppingcart").transform.SetParent(GameObject.Find("Character").transform);
+                GameObject.Find("shoppingcart").transform.SetParent(GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform);
                 transform.GetComponent<Rigidbody>().useGravity = true;
                 transform.GetComponent<Rigidbody>().isKinematic = false;
                 cart.transform.position = cam.transform.position + cam.transform.forward * 5.75f;

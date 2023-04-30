@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Photon.Pun;
 public class ColorSelectedItem : MonoBehaviour
 {
     bool pointeron;
@@ -55,7 +55,7 @@ public class ColorSelectedItem : MonoBehaviour
             if (allGreen)
             {
                 GameObject.Find("EmptyObj").transform.Find("Checkout").gameObject.SetActive(true);
-                GameObject.Find("Character").GetComponent<CharacterMovement>().enabled = false;
+                GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).GetComponent<CharacterMovement>().enabled = false;
             }
         }
         if (allGreen)
@@ -108,7 +108,7 @@ public class ColorSelectedItem : MonoBehaviour
             else if(selectedButtonIndex == 1 && Input.GetButtonDown("js7"))
             {
                 GameObject.Find("EmptyObj").transform.Find("Checkout").gameObject.SetActive(false);
-                GameObject.Find("Character").GetComponent<CharacterMovement>().enabled = true;
+                GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).GetComponent<CharacterMovement>().enabled = true;
             }
 
             

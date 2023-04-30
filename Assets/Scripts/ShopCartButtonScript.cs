@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 public class ShopCartButtonScript  : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,7 +12,7 @@ public class ShopCartButtonScript  : MonoBehaviour
     int flag = -1;
     void Start()
     {
-        cam = GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
+        cam = GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
         audioSource = gameObject.AddComponent<AudioSource>(); // Add an AudioSource component to the same GameObject as this script
     }
 
@@ -38,7 +38,7 @@ public class ShopCartButtonScript  : MonoBehaviour
         if (flag == 1 && Input.GetButtonDown("js7"))
         {
             
-            cart.transform.SetParent(GameObject.Find("Character").transform);
+            cart.transform.SetParent(GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform);
 
             //cart.transform.position = cam.transform.position + cam.transform.forward * 4f;
             //cart.transform.position = new Vector3(cart.transform.position.x + 1.5f, (float)0.75, cart.transform.position.z + 1.25f);

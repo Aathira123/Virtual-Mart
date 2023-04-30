@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using Photon.Pun;
 public class SelectCart : MonoBehaviour
 {
 
@@ -32,7 +32,7 @@ public class SelectCart : MonoBehaviour
         item3 = PlayerPrefs.GetString("item3");
         item4 = PlayerPrefs.GetString("item4");
         item5 = PlayerPrefs.GetString("item5");
-        cam = GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
+        cam = GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").gameObject;
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class SelectCart : MonoBehaviour
             cartselected = true;
             GameObject cart = GameObject.Find("shoppingcarts").transform.GetChild(0).gameObject;
             cart.name= "shoppingcart";
-           cart.transform.SetParent(GameObject.Find("Character").transform);
+           cart.transform.SetParent(GameObject.Find("Character" + PhotonNetwork.LocalPlayer.ActorNumber.ToString()).transform);
             cart.transform.Find("ShoppingList").gameObject.SetActive(true);
            cart.transform.Find("ShoppingList").transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text=item1;
             cart.transform.Find("ShoppingList").transform.Find("Button1").GetComponentInChildren<TextMeshProUGUI>().text=item2;

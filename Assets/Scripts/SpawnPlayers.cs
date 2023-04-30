@@ -5,14 +5,18 @@ using Photon.Pun;
 public class SpawnPlayers : MonoBehaviour
 {
     public GameObject playerPrefab;
-    public float minX, minZ, maxX, maxZ;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 randompos = new Vector3(Random.Range(minX, maxX), -51f, Random.Range(minZ, maxZ));
-        GameObject instobj =PhotonNetwork.Instantiate(playerPrefab.name, randompos, Quaternion.identity);
-        instobj.transform.SetParent(GameObject.Find("Character").transform.Find("XRCardboardRig").transform.Find("HeightOffset").transform.Find("Main Camera").transform);
+        Debug.Log(PhotonNetwork.CurrentRoom.Name);  Vector3 randompos = new Vector3(0, 0, 0);
+        GameObject instobj = PhotonNetwork.Instantiate(playerPrefab.name, randompos, Quaternion.identity);
+        instobj.name = "Character"+ PhotonNetwork.LocalPlayer.ActorNumber.ToString();
+        Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
+
     }
+
 
     // Update is called once per frame
     void Update()
